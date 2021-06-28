@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>List</title>
+</head>
+<body>
+    <h1>Sale List</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>Sale Id</th>
+            <th>Salesman Id</th>
+            <th>Salesman Name</th>
+            <th>Date Of Sale</th>
+            <th>Prod Id</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="st : ${listsale}">
+            <td th:text="${st.slNo}"></td>
+            <td th:text="${st.salesmanID}"></td>
+            <td th:text="${st.salesmanName}"></td>
+            <td th:text="${st.dos}"></td>
+            <td th:text="${st.prodID}"></td>
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>
